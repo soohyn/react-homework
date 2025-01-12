@@ -1,15 +1,23 @@
+button {
+  all: unset;
+}
+
 .chip {
   --bg-active: #004fff;
   --border-normal: rgba(0, 0, 0, 0.1);
 
   padding: 0.375rem 0.75rem;
-  box-shadow: 0 0 0 0.0625rem var(--border-normal);
-  color: black;
   border-radius: 1.25rem;
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 0 0.0625rem var(--border-normal);
+  transition: 0.3s all;
+  user-select: none;
+  cursor: pointer;
 
   &.chip--active {
     background-color: var(--bg-active);
-    box-shadow: none;
     color: white;
+    box-shadow: none;
   }
 }
