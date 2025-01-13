@@ -46,7 +46,7 @@ input[type="checkbox"] {
   background-color: #e8eef2;
   width: 3.125rem;
   cursor: pointer;
-  transition: 0.3s all;
+  transition: all 0.3s;
 
   .toggle__input[type="checkbox"] {
     display: none;
@@ -59,9 +59,9 @@ input[type="checkbox"] {
     background-color: white;
     align-self: start;
     border: 0.03125rem solid rgba(0, 0, 0, 0.05);
-    transition: 0.3s all;
+    transition: all 0.3s;
   }
-  
+
   &.toggle--on {
     background-color: #004fff;
 
