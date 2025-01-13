@@ -7,6 +7,7 @@ function App() {
     "div",
     { role: "group" },
     React.createElement(Chip, { label: "공개 예정", active: true }),
+    React.createElement(Toggle, { status: "off" })
   );
 }
 

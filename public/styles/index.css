@@ -1,11 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
 button {
+  all: unset;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
   all: unset;
 }
 
-.chip {
+:root {
   --bg-active: #004fff;
   --border-normal: rgba(0, 0, 0, 0.1);
+}
 
+[role="group"] {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.chip {
+  align-self: start;
   padding: 0.375rem 0.75rem;
   border-radius: 1.25rem;
   background-color: white;
@@ -13,11 +31,42 @@ button {
   box-shadow: 0 0 0 0.0625rem var(--border-normal);
   transition: 0.3s all;
   user-select: none;
-  cursor: pointer;
 
   &.chip--active {
     background-color: var(--bg-active);
     color: white;
     box-shadow: none;
+  }
+}
+
+.toggle {
+  display: flex;
+  padding: 0.125rem;
+  border-radius: 6.25rem;
+  background-color: #e8eef2;
+  width: 3.125rem;
+  cursor: pointer;
+  transition: 0.3s all;
+
+  .toggle__input[type="checkbox"] {
+    display: none;
+  }
+
+  .toggle__indicator {
+    width: 1.625rem;
+    height: 1.625rem;
+    border-radius: 100%;
+    background-color: white;
+    align-self: start;
+    border: 0.03125rem solid rgba(0, 0, 0, 0.05);
+    transition: 0.3s all;
+  }
+  
+  &.toggle--on {
+    background-color: #004fff;
+
+    .toggle__indicator {
+      margin: 0 0 0 calc(50% - 0.25rem);
+    }
   }
 }
